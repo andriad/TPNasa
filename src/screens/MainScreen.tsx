@@ -20,11 +20,8 @@ import GalaxyCard from "../components/GalaxyCard";
 import {StackNavigationProp} from "react-navigation-stack/lib/typescript/src/vendor/types";
 import { RouteProp } from '@react-navigation/native';
 
-
-type ProfileScreenNavigationProp = StackNavigationProp<RootStackParamList, 'MainScreen'>;
-
 type Props = {
-    navigation: ProfileScreenNavigationProp;
+    navigation: StackNavigationProp<RootStackParamList>
 }
 
 const MainScreen: React.FC<Props> = (props) => {
@@ -76,7 +73,7 @@ const MainScreen: React.FC<Props> = (props) => {
             </View>
             <View style={styles.body}>
                 <ScrollView>
-                    <GalaxyCard galaxy={galaxy}/>
+                    <GalaxyCard galaxy={galaxy} navigation={props.navigation}/>
                 </ScrollView>
             </View>
         </SafeAreaView>

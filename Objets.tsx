@@ -10,5 +10,7 @@ export type Galaxy = {
 }
 
 export type RootStackParamList = {
-    MainScreen: {galaxy: Galaxy};
+    ZoomScreen: {galaxy: Galaxy};
+    GalaxyCard: undefined;
+    MainScreen: undefined;
 }
